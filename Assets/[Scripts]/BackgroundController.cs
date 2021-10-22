@@ -9,8 +9,8 @@
  *  - on _CheckBounds(), calls _Reset() on the background object if it goes past the lower boundary
  *  - on _Reset(), resets a background object to the top of the boundary
  * 
- * Version 1.03
- *  - No new changes
+ * Version 1.04
+ *  - Modified speed and boundary variables to work horizontally
  ******************/
 
 using System.Collections;
@@ -19,8 +19,8 @@ using UnityEngine;
 
 public class BackgroundController : MonoBehaviour
 {
-    public float verticalSpeed;
-    public float verticalBoundary;
+    public float horizontalSpeed;
+    public float horizontalBoundary;
 
     // Update is called once per frame
     void Update()
@@ -29,23 +29,23 @@ public class BackgroundController : MonoBehaviour
         _CheckBounds();
     }
 
-    // Resets a background object to the top of the boundary
+    // Resets a background object to the right of the boundary
     private void _Reset()
     {
-        transform.position = new Vector3(0.0f, verticalBoundary);
+        transform.position = new Vector3(horizontalBoundary, 0.0f);
     }
 
     // Moves the background object at a given speed across the screen
     private void _Move()
     {
-        transform.position -= new Vector3(0.0f, verticalSpeed) * Time.deltaTime;
+        transform.position -= new Vector3(horizontalSpeed, 0.0f) * Time.deltaTime;
     }
 
-    // calls _Reset() on the background object if it goes past the lower boundary
+    // calls _Reset() on the background object if it goes past the left boundary
     private void _CheckBounds()
     {
-        // if the background is lower than the bottom of the screen then reset
-        if (transform.position.y <= -verticalBoundary)
+        // if the background is further than the left side of the screen then reset
+        if (transform.position.x <= -horizontalBoundary)
         {
             _Reset();
         }

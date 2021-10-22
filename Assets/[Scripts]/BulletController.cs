@@ -9,8 +9,8 @@
  *  - on _CheckBounds(), Checks the bullets location, and will return it to the bullet pool if it goes beyond the top boundary
  *  - uses OnTriggerEnter2D() to watch for the bullet to enter a trigger, which returns the bullet to the bullet pool
  * 
- * Version 1.03
- *  - No new changes
+ * Version 1.04
+ *  - Bullets move along x axis towards the right of the screen, variable names changed appropriately
  ******************/
 
 using System.Collections;
@@ -19,8 +19,8 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour, IApplyDamage
 {
-    public float verticalSpeed;
-    public float verticalBoundary;
+    public float horizontalSpeed;
+    public float horizontalBoundary;
     public BulletManager bulletManager;
     public int damage;
     
@@ -40,13 +40,13 @@ public class BulletController : MonoBehaviour, IApplyDamage
     // Moves all bullet objects at a given speed in a given direction
     private void _Move()
     {
-        transform.position += new Vector3(0.0f, verticalSpeed, 0.0f) * Time.deltaTime;
+        transform.position += new Vector3(horizontalSpeed, 0.0f, 0.0f) * Time.deltaTime;
     }
 
     // Checks the bullets location, and will return it to the bullet pool if it goes beyond the top boundary
     private void _CheckBounds()
     {
-        if (transform.position.y > verticalBoundary)
+        if (transform.position.x > horizontalBoundary)
         {
             bulletManager.ReturnBullet(gameObject);
         }

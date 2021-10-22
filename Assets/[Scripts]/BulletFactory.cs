@@ -7,7 +7,7 @@
  *  - A factory used by BulletManager to create a random bullet from a list of provided Game Objects
  *  - Creates and returns a bullet to be added to the bullet pool
  * 
- * Version 1.03
+ * Version 1.04
  *  - No new changes
  ******************/
 

@@ -6,7 +6,7 @@
  * Description:
  *  - An Enum to differentiate between the types of bullets used in the game. 
  * 
- * Version 1.03
+ * Version 1.04
  *  - No new changes
  ******************/
 
