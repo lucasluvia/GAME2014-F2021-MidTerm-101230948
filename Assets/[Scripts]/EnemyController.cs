@@ -8,7 +8,7 @@
  *  - on _Move(), moves the character at a set speed and direction on Update
  *  - on _CheckBounds(), uses the boundary variable and CheckBounds function to limit enemy movement to within the screen
  * 
- * Version 1.02
+ * Version 1.03
  *  - No new changes
  ******************/
 

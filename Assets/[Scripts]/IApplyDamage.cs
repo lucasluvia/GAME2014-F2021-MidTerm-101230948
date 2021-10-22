@@ -6,7 +6,7 @@
  * Description:
  *  - An Interface which creates the function ApplyDamage that classes inheriting from IApplyDamage can call and use.
  * 
- * Version 1.02
+ * Version 1.03
  *  - No new changes
  ******************/
 

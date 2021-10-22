@@ -10,7 +10,7 @@
  *  - HasBullets() returns whether the current amount of bullets in the pool is greater than 0 or not
  *  - ReturnBullet() deactivates and returns a given bullet to the bullet pool
  * 
- * Version 1.02
+ * Version 1.03
  *  - No new changes
  ******************/
 

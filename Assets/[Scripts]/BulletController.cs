@@ -9,7 +9,7 @@
  *  - on _CheckBounds(), Checks the bullets location, and will return it to the bullet pool if it goes beyond the top boundary
  *  - uses OnTriggerEnter2D() to watch for the bullet to enter a trigger, which returns the bullet to the bullet pool
  * 
- * Version 1.02
+ * Version 1.03
  *  - No new changes
  ******************/
 
