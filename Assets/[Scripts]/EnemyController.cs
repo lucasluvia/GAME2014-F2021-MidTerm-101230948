@@ -8,8 +8,8 @@
  *  - on _Move(), moves the character at a set speed and direction on Update
  *  - on _CheckBounds(), uses the boundary variable and CheckBounds function to limit enemy movement to within the screen
  * 
- * Version 1.04
- *  - No new changes
+ * Version 1.05
+ *  - Changed enemies to move vertically and adjusted variable names to match
  ******************/
 
 using System.Collections;
@@ -18,8 +18,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public float horizontalSpeed;
-    public float horizontalBoundary;
+    public float verticalSpeed;
+    public float verticalBoundary;
     public float direction;
 
     // Update is called once per frame
@@ -32,20 +32,20 @@ public class EnemyController : MonoBehaviour
     // Moves the character at a set speed and direction on Update
     private void _Move()
     {
-        transform.position += new Vector3(horizontalSpeed * direction * Time.deltaTime, 0.0f, 0.0f);
+        transform.position += new Vector3(0.0f, verticalSpeed * direction * Time.deltaTime, 0.0f);
     }
 
     // Uses the boundary variable and CheckBounds function to limit enemy movement to within the screen
     private void _CheckBounds()
     {
         // check right boundary
-        if (transform.position.x >= horizontalBoundary)
+        if (transform.position.y >= verticalBoundary)
         {
             direction = -1.0f;
         }
 
         // check left boundary
-        if (transform.position.x <= -horizontalBoundary)
+        if (transform.position.y <= -verticalBoundary)
         {
             direction = 1.0f;
         }

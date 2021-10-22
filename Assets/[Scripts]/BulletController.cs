@@ -9,8 +9,8 @@
  *  - on _CheckBounds(), Checks the bullets location, and will return it to the bullet pool if it goes beyond the top boundary
  *  - uses OnTriggerEnter2D() to watch for the bullet to enter a trigger, which returns the bullet to the bullet pool
  * 
- * Version 1.04
- *  - Bullets move along x axis towards the right of the screen, variable names changed appropriately
+ * Version 1.05
+ *  - No new changes
  ******************/
 
 using System.Collections;

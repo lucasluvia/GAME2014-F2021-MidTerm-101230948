@@ -9,8 +9,8 @@
  *  - on _CheckBounds(), calls _Reset() on the background object if it goes past the lower boundary
  *  - on _Reset(), resets a background object to the top of the boundary
  * 
- * Version 1.04
- *  - Modified speed and boundary variables to work horizontally
+ * Version 1.05
+ *  - No new changes
  ******************/
 
 using System.Collections;
