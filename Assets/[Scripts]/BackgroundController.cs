@@ -9,8 +9,8 @@
  *  - on _CheckBounds(), calls _Reset() on the background object if it goes past the lower boundary
  *  - on _Reset(), resets a background object to the top of the boundary
  * 
- * Version 1.01
- *  - No changes from template.
+ * Version 1.02
+ *  - No new changes
  ******************/
 
 using System.Collections;

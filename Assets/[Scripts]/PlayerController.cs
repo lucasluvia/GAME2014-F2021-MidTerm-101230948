@@ -11,8 +11,8 @@
  *      - Moves the character within the boundary if they go past it.
  *  - on _FireBullet(), fires a bullet from the bullet pool at a given frame count, if one is available
  * 
- * Version 1.01
- *  - No changes from template.
+ * Version 1.02
+ *  - No new changes
  ******************/
 
 using System.Collections;
