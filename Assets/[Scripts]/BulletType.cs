@@ -6,8 +6,7 @@
  * Description:
  *  - An Enum to differentiate between the types of bullets used in the game. 
  * 
- * Version 1.05
- *  - No new changes
+ * Version 1.06
  ******************/
 
 using System.Collections;
